@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .hidden {
+        display: none;
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header, footer {
+            background-color: #333;
+            text-align: center;
+            padding: 1em;
+        }
+        header h1, footer h1{
+            color: #fff;
+        }
+    .content{
+        max-width: 600px;
+        margin: 2em auto;
+        padding: 2em;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+</style>
+
+<body>
+    <header>
+        <h1>Чимқўрғон сув омбори</h1>
+    </header>
+    <div class="content">
+        <img src="./object.jpg" alt="belgilangan obyekt rasmi">
+        <h1> Чимқўрғон сув омбори қирғоқларининг ўзгаришини мониторинг қилиш </h1>
+        <p>
+            Сув ҳавзаси ҳақидаги керакли маълумотларни халқаро Global Reservoir and Damb - сув ҳавзалари ва дамбаларнинг маълумотлар базасидан юклаб оламиз. Earth Engine маълумотлар каталоги кенг
+            тарқалган геофазовий маълумотлар тўпламининг катта архивидир. Каталогнинг
+            <span id="extraText" class="hidden">
+                 аксарияти Ерни масофадан туриб
+                зондлашдан олинган суратлардан, шу жумладан Landsat миссиясининг бутун архивидан (бу деярли ярим асрлик
+                кузатишлар), шунингдек Европа сунъий йўлдошлари Sentitel- 1-5 маълумотларининг тўлиқ архивидан иборат.
+                Каталог фаол масофадан зондлаш миссиялари ҳисобига кунига тахминан 6000 та сурат тезлигида янгиланади.
+                Earth Engine "Image" тўпламидаги суратлар икки ўлчовли растр диапазонларига асосланган оддий ва жуда
+                умумий маълумотлардир. Ҳар бир расм, шунингдек, жойлашув, маълумот яратилган сана ва тасвир олинган ёки
+                қайта ишланган шароитлар каби маълумотларни ўз ичига олган ва ўзаро боғланган метамаълумотларига эга.
+                Мазмуни бўйича бирлаштирилган тасвирлар гуруҳланади ва "тасвирлар тўплами" (ImageCollection) сифатида
+                тақдим этилади. Тўпламлар фойдаланувчиларга миллионлаб индивидуал тасвирлардан маълумотларни танлашни
+                осонлаштирадиган маълум фазовий, вақт ёки бошқа мезонлар асосида тезкор фильтрлаш ва саралаш имконини
+                беради. Crop Monitoring дастурининг асоси Earth Engine бўлиб турли сув обьектларида юзага келаётган
+                ўзгаришлар орқали юзага келаётган муаммоларни кузатиш, таҳлил қилиш, ечим топиш, бартараф этишда кенг
+                кўламли фойдаланиш мумкин.
+            </span>
+            <a href="javascript:void(0);" id="readMoreLink">Батафсил...</a>
+        </p>
+        <a href="https://crop-monitoring.eos.com/login/auth"
+            target="_blank" rel="noopener noreferrer">
+            &nbsp; Чимқўрғон сув омборида сув сатҳининг ўзгариши ва ўсимлик қатламининг шаклланишини мониторинг қилиш.
+        </a>
+    </div>
+    <footer>
+        <h1>Muallif bilan bog'lanish</h1>
+        <h2 style="color: #fff;">
+            phone:
+            <i class="fa fa-phone" style="font-size:30px;color:rgb(15, 211, 236)">+998 90 332 34 00</i>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            telegram:
+            <a href="https://t.me/quvonchbek_eshquvatov" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-telegram" style="font-size:30px;color:rgb(15, 211, 236)"></i>
+            </a>
+        </h2>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var readMoreLink = document.getElementById("readMoreLink");
+            var extraText = document.getElementById("extraText");
+
+            readMoreLink.addEventListener("click", function () {
+                if (extraText.style.display === "none" || extraText.style.display === "") {
+                    extraText.style.display = "inline"; // or "block" depending on your layout
+                    readMoreLink.innerHTML = "^";
+                } else {
+                    extraText.style.display = "none";
+                    readMoreLink.innerHTML = "Батафсил...";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
